@@ -1,0 +1,22 @@
+{
+  "name": "book-list",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@opentelemetry/api": "1.4.1",
+    "eslint": "8.43.0",
+    "eslint-config-next": "13.4.7",
+    "fibers": "5.0.3",
+    "next": "13.4.7",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sass": "1.63.6",
+    "typescript": "5.1.6"
+  }
+}
