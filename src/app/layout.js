@@ -1,7 +1,6 @@
+import { Roboto_Slab } from 'next/font/google'
 import './globals.css'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+const inter = Roboto_Slab({ preload: false })
 
 export const metadata = {
   title: 'Create Next App',
@@ -10,7 +9,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="bg-[#f1f1f1]">
       <body className={inter.className}>{children}</body>
     </html>
   )
