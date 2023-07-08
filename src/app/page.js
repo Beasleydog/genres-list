@@ -38,9 +38,9 @@ async function GenreList({ promise }) {
   return (
     <div className="grid md:grid-cols-3 grid-cols-1 p-2 gap-2 animate-fade-in">
       {
-        genres.map(genre => {
+        genres.map((genre, i) => {
           return (
-            <GenreButton name={genre.genreName} id={genre.genreId} />
+            <GenreButton key={i} name={genre.genreName} id={genre.genreId} />
           );
         })
       }

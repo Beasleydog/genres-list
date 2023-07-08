@@ -53,9 +53,9 @@ export default function GenreTab(params) {
 function BookDisplay({ books }) {
     return (
         <div className={`w-[85%] mt-20 grid sm:grid-cols-4 grid-cols-2 p-2 gap-x-[8%] sm:gap-y-[4%] gap-y-[1%] flex-grow rounded ${SMALL_WINDOW ? "pt-[90px]" : "pt-[200px]"}`}>
-            {books.map(book => {
+            {books.map((book, i) => {
                 return (
-                    <BookImage isbn={book.isbn} />
+                    <BookImage key={i} isbn={book.isbn} />
                 );
             })}
         </div>
@@ -64,19 +64,19 @@ function BookDisplay({ books }) {
 function AuthorDisplay({ authors }) {
     return (
         <div className='pt-[220px] flex flex-col gap-2'>
-            {authors.map(author => {
+            {authors.map((author, i) => {
                 return (
-                    <AuthorName name={author} />
+                    <AuthorName key={i} name={author} />
                 );
             })}
         </div>
     )
 }
-function AuthorName({ name }) {
-    return <div className="text-gray-900 text-2xl font-semibold p-2 bg-slate-200 rounded">{name}</div>
+function AuthorName({ name, key }) {
+    return <div key={key} className="text-gray-900 text-2xl font-semibold p-2 bg-slate-200 rounded">{name}</div>
 }
-function BookImage({ isbn }) {
-    return <Link href="https://google.com">
+function BookImage({ isbn, key }) {
+    return <Link key={key} href="https://google.com">
         <Image quality={100} height={0} width={0} sizes="100vw" src={`${process.env.NEXT_PUBLIC_URL}/api/bookCover?isbn=${isbn}`} alt="book cover" className="w-full h-auto rounded-lg shadow" />
     </Link>;
 }
