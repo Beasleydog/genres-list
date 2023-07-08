@@ -5,7 +5,7 @@ const nextConfig = {
             'covers.openlibrary.org',
             'localhost',
             'books.google.com',
-            process.env.NEXT_PUBLIC_URL
+            process.env.NEXT_PUBLIC_DOMAIN,
         ]
     }
 }
