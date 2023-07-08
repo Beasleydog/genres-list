@@ -4,7 +4,8 @@ const nextConfig = {
         domains: [
             'covers.openlibrary.org',
             'localhost',
-            'books.google.com'
+            'books.google.com',
+            process.env.NEXT_PUBLIC_URL
         ]
     }
 }
